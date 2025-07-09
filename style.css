@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-item {
+  position: relative;
+  background-color: #e0e0e0;
+  border: 1px solid black;
+  padding: 40px 15px 15px 15px; 
+  margin: 10px;
+}
+
+.menu-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ccc;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.chicken .menu-title {
+  background-color: #f7bdbd;
+}
+
+.beef .menu-title {
+  background-color: #d9534f;
+  color: white;
+}
+
+.mutton .menu-title {
+  background-color: #ffe58f;
+}
+
+
+@media (min-width: 992px) {
+  .menu-item {
+    float: left;
+    width: 31.33%;
+    margin: 1%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-item {
+    float: left;
+    width: 47%;
+    margin: 1.5%;
+  }
+  .menu-item:nth-child(3) {
+    width: 96%;
+    clear: both;
+    margin: 1.5% auto;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .menu-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
